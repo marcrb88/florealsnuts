@@ -9,7 +9,7 @@ const carouselImages = [
   },
   {
     url: 'https://images.pexels.com/photos/4033630/pexels-photo-4033630.jpeg',
-    title: 'Producción Sostenible',
+    title: 'Canvi',
     subtitle: 'Compromiso con la agricultura de futuro',
   },
   {
