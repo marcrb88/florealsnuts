@@ -1,31 +1,34 @@
 import ImageCarousel from '../components/ImageCarousel';
 import { Leaf, Award, Users, TreeDeciduous } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 type HomePageProps = {
   onNavigate: (page: 'catalog') => void;
 };
 
 export default function HomePage({ onNavigate }: HomePageProps) {
+  const { t } = useTranslation();
+
   const features = [
     {
       icon: TreeDeciduous,
-      title: 'Variedades Selectas',
-      description: 'Amplio catálogo de variedades de almendro adaptadas a diferentes climas y suelos',
+      title: t('home.features.varieties'),
+      description: t('home.features.varieties_desc'),
     },
     {
       icon: Award,
-      title: 'Calidad Garantizada',
-      description: 'Certificación de origen y calidad en todos nuestros productos',
+      title: t('home.features.quality'),
+      description: t('home.features.quality_desc'),
     },
     {
       icon: Leaf,
-      title: 'Cultivo Sostenible',
-      description: 'Prácticas agrícolas respetuosas con el medio ambiente',
+      title: t('home.features.sustainable'),
+      description: t('home.features.sustainable_desc'),
     },
     {
       icon: Users,
-      title: 'Asesoramiento Experto',
-      description: 'Equipo profesional para guiarte en la selección de variedades',
+      title: t('home.features.advisory'),
+      description: t('home.features.advisory_desc'),
     },
   ];
 
@@ -37,12 +40,10 @@ export default function HomePage({ onNavigate }: HomePageProps) {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              Especialistas en Almendros
+              {t('home.section1.title')}
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Con años de experiencia en el cultivo y comercialización de almendros,
-              ofrecemos las mejores variedades del mercado. Nuestra pasión es ayudarte
-              a encontrar la variedad perfecta para tu explotación agrícola.
+              {t('home.section1.description')}
             </p>
           </div>
 
@@ -71,7 +72,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
               onClick={() => onNavigate('catalog')}
               className="bg-green-800 hover:bg-green-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors text-lg"
             >
-              Ver Catálogo de Variedades
+              {t('home.button')}
             </button>
           </div>
         </div>
@@ -83,28 +84,22 @@ export default function HomePage({ onNavigate }: HomePageProps) {
             <div>
               <img
                 src="https://images.pexels.com/photos/2132171/pexels-photo-2132171.jpeg"
-                alt="Almendro en flor"
+                alt="Almond tree in bloom"
                 className="rounded-lg shadow-lg w-full h-[400px] object-cover"
               />
             </div>
             <div>
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                Nuestra Experiencia
+                {t('home.section2.title')}
               </h2>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                Llevamos décadas dedicados al cultivo y comercialización de almendros.
-                Nuestra experiencia nos permite seleccionar y ofrecer las variedades más
-                productivas y adaptadas a las condiciones de cada región.
+                {t('home.section2.para1')}
               </p>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                Trabajamos directamente con viveros certificados y aplicamos rigurosos
-                controles de calidad en todas las fases del proceso, desde la selección
-                de patrones hasta la entrega final.
+                {t('home.section2.para2')}
               </p>
               <p className="text-gray-600 leading-relaxed">
-                Nuestro compromiso es proporcionar plantas de la más alta calidad,
-                acompañadas del mejor asesoramiento técnico para garantizar el éxito
-                de tu plantación.
+                {t('home.section2.para3')}
               </p>
             </div>
           </div>

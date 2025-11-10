@@ -1,0 +1,134 @@
+{
+  "navigation": {
+    "home": "Inici",
+    "catalog": "Catàleg",
+    "contact": "Contacte",
+    "title": "Ametllers Premium"
+  },
+  "home": {
+    "carousel": {
+      "slide1_title": "Cultiu d'Ametllers de Qualitat",
+      "slide1_subtitle": "Varietats seleccionades per a la teva explotació",
+      "slide2_title": "Producció Sostenible",
+      "slide2_subtitle": "Compromís amb l'agricultura del futur",
+      "slide3_title": "Ametllers Premium",
+      "slide3_subtitle": "Assessorament expert i garantia de qualitat"
+    },
+    "section1": {
+      "title": "Especialistes en Ametllers",
+      "description": "Amb anys d'experiència en el cultiu i comercialització d'ametllers, oferim les millors varietats del mercat. La nostra passió és ajudar-te a trobar la varietat perfecta per a la teva explotació agrícola."
+    },
+    "features": {
+      "varieties": "Varietats Selectes",
+      "varieties_desc": "Ampli catàleg de varietats d'ametller adaptades a diferents climes i sòls",
+      "quality": "Qualitat Garantida",
+      "quality_desc": "Certificació d'origen i qualitat en tots els nostres productes",
+      "sustainable": "Cultiu Sostenible",
+      "sustainable_desc": "Pràctiques agrícoles respectuoses amb el medi ambient",
+      "advisory": "Assessorament Expert",
+      "advisory_desc": "Equip professional per guiar-te en la selecció de varietats"
+    },
+    "button": "Veure Catàleg de Varietats",
+    "section2": {
+      "title": "La Nostra Experiència",
+      "para1": "Duem dècades dedicats al cultiu i comercialització d'ametllers. La nostra experiència ens permet seleccionar i oferir les varietats més productives i adaptades a les condicions de cada regió.",
+      "para2": "Treballem directament amb vivers certificats i apliquem rigurosos controls de qualitat en totes les fases del procés, des de la selecció de patrons fins a la lliurada final.",
+      "para3": "El nostre compromís és proporcionar plantes de la més alta qualitat, acompanyades del millor assessorament tècnic per garantir l'èxit de la teva plantació."
+    }
+  },
+  "catalog": {
+    "title": "Catàleg de Varietats",
+    "subtitle": "Descobreix la nostra selecció d'ametllers d'alta qualitat",
+    "details": "Veure Detalls",
+    "close": "Tancar",
+    "price_unit": "€ / unitat",
+    "loading": "Carregant...",
+    "error": "Error al carregar les varietats"
+  },
+  "contact": {
+    "title": "Contacte",
+    "subtitle": "Estem aquí per ajudar-te amb el teu projecte",
+    "form_title": "Envia'ns un Missatge",
+    "form_success": "Missatge enviat amb èxit!",
+    "form_success_msg": "Ens posarem en contacte amb tu al més aviat possible.",
+    "fields": {
+      "name": "Nom Complet *",
+      "email": "Email *",
+      "phone": "Telèfon",
+      "message": "Missatge *"
+    },
+    "placeholders": {
+      "name": "El teu nom",
+      "email": "el_teu@email.com",
+      "phone": "+34 123 456 789",
+      "message": "Explica'ns com podem ajudar-te..."
+    },
+    "send": "Enviar Missatge",
+    "contact_info": "Contacte",
+    "description": "¿Necessites assessorament sobre quina varietat d'ametller és la més adequada per a la teva explotació? El nostre equip d'experts està disponible per resoldre totes les teves dubtes i ajudar-te a prendre la millor decisió.",
+    "phone_label": "Telèfon",
+    "phone_value": "+34 123 456 789",
+    "hours": "Dl - Dv: 9:00 - 18:00",
+    "email_label": "Email",
+    "email_value": "info@ametllerspremium.es",
+    "response_time": "Resposta en 24-48 hores",
+    "address_label": "Adreça",
+    "address_value": "Camí de l'Ametller, 123",
+    "city_value": "12345 València, Espanya",
+    "visit_hours": "Horari de Visites",
+    "weekdays": "Dilluns - Divendres:",
+    "weekdays_time": "9:00 - 14:00, 16:00 - 18:00",
+    "saturday": "Dissabtes:",
+    "saturday_time": "9:00 - 13:00 (cita prèvia)",
+    "note": "* Es recomana concertar cita prèvia per a visites"
+  },
+  "footer": {
+    "copyright": "© 2024 Ametllers Premium. Tots els drets reservats."
+  },
+  "almond_varieties": {
+    "marcona": {
+      "name": "Marcona",
+      "description": "Varietat d'ametlla de gran qualitat, coneguda pel seu sabor dolç i textura suau. Ideal per a consum directe i reposteria fina.",
+      "characteristics": "Forma arrodonida, mida gran, closca dura, alt contingut en oli",
+      "origin": "Espanya"
+    },
+    "guara": {
+      "name": "Guara",
+      "description": "Ametlla d'alta productivitat i excel·lent adaptació. Molt valorada a la indústria per la seva regularitat i qualitat constant.",
+      "characteristics": "Closca semi-dura, gra allargat, floració tardana, resistent a gelades",
+      "origin": "Aragó, Espanya"
+    },
+    "largueta": {
+      "name": "Largueta",
+      "description": "Varietat tradicional espanyola molt apreciada per la seva forma allargada i sabor intens. Perfecta per a turrons i peladilles.",
+      "characteristics": "Forma molt allargada, closca tova, sabor característic, floració primerenca",
+      "origin": "Llevant, Espanya"
+    },
+    "avijor": {
+      "name": "Avijor",
+      "description": "Varietat moderna autofèrtil d'alta producció. Excel·lent comportament agronòmic i gran adaptabilitat.",
+      "characteristics": "Autofèrtil, alta productivitat, gra gran, floració mitjana-tardana",
+      "origin": "Espanya"
+    },
+    "vairo": {
+      "name": "Vairo",
+      "description": "Ametlla de closca tova amb excel·lent calibre. Molt productiva i de floració tardana, ideal per a zones amb risc de gelades.",
+      "characteristics": "Closca molt tova, gra gran i pla, floració molt tardana",
+      "origin": "Espanya"
+    },
+    "soleta": {
+      "name": "Soleta",
+      "description": "Varietat autofèrtil de floració tardana. Excel·lent productivitat i adaptació a diferents condicions climàtiques.",
+      "characteristics": "Autofèrtil, floració tardana, closca dura, alt rendiment",
+      "origin": "CITA Aragó"
+    }
+  },
+  "harvest_periods": {
+    "marcona": "Setembre - Octubre",
+    "guara": "Setembre",
+    "largueta": "Agost - Setembre",
+    "avijor": "Setembre",
+    "vairo": "Setembre - Octubre",
+    "soleta": "Setembre"
+  }
+}

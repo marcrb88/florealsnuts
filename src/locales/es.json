@@ -1,0 +1,134 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "catalog": "Catálogo",
+    "contact": "Contacto",
+    "title": "Almendros Premium"
+  },
+  "home": {
+    "carousel": {
+      "slide1_title": "Cultivo de Almendros de Calidad",
+      "slide1_subtitle": "Variedades seleccionadas para tu explotación",
+      "slide2_title": "Producción Sostenible",
+      "slide2_subtitle": "Compromiso con la agricultura del futuro",
+      "slide3_title": "Almendros Premium",
+      "slide3_subtitle": "Asesoramiento experto y garantía de calidad"
+    },
+    "section1": {
+      "title": "Especialistas en Almendros",
+      "description": "Con años de experiencia en el cultivo y comercialización de almendros, ofrecemos las mejores variedades del mercado. Nuestra pasión es ayudarte a encontrar la variedad perfecta para tu explotación agrícola."
+    },
+    "features": {
+      "varieties": "Variedades Selectas",
+      "varieties_desc": "Amplio catálogo de variedades de almendro adaptadas a diferentes climas y suelos",
+      "quality": "Calidad Garantizada",
+      "quality_desc": "Certificación de origen y calidad en todos nuestros productos",
+      "sustainable": "Cultivo Sostenible",
+      "sustainable_desc": "Prácticas agrícolas respetuosas con el medio ambiente",
+      "advisory": "Asesoramiento Experto",
+      "advisory_desc": "Equipo profesional para guiarte en la selección de variedades"
+    },
+    "button": "Ver Catálogo de Variedades",
+    "section2": {
+      "title": "Nuestra Experiencia",
+      "para1": "Llevamos décadas dedicados al cultivo y comercialización de almendros. Nuestra experiencia nos permite seleccionar y ofrecer las variedades más productivas y adaptadas a las condiciones de cada región.",
+      "para2": "Trabajamos directamente con viveros certificados y aplicamos rigurosos controles de calidad en todas las fases del proceso, desde la selección de patrones hasta la entrega final.",
+      "para3": "Nuestro compromiso es proporcionar plantas de la más alta calidad, acompañadas del mejor asesoramiento técnico para garantizar el éxito de tu plantación."
+    }
+  },
+  "catalog": {
+    "title": "Catálogo de Variedades",
+    "subtitle": "Descubre nuestra selección de almendros de alta calidad",
+    "details": "Ver Detalles",
+    "close": "Cerrar",
+    "price_unit": "€ / unidad",
+    "loading": "Cargando...",
+    "error": "Error al cargar las variedades"
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "Estamos aquí para ayudarte con tu proyecto",
+    "form_title": "Envíanos un Mensaje",
+    "form_success": "¡Mensaje enviado con éxito!",
+    "form_success_msg": "Nos pondremos en contacto contigo lo antes posible.",
+    "fields": {
+      "name": "Nombre Completo *",
+      "email": "Email *",
+      "phone": "Teléfono",
+      "message": "Mensaje *"
+    },
+    "placeholders": {
+      "name": "Tu nombre",
+      "email": "tu@email.com",
+      "phone": "+34 123 456 789",
+      "message": "Cuéntanos en qué podemos ayudarte..."
+    },
+    "send": "Enviar Mensaje",
+    "contact_info": "Contacto",
+    "description": "¿Necesitas asesoramiento sobre qué variedad de almendro es la más adecuada para tu explotación? Nuestro equipo de expertos está disponible para resolver todas tus dudas y ayudarte a tomar la mejor decisión.",
+    "phone_label": "Teléfono",
+    "phone_value": "+34 123 456 789",
+    "hours": "Lun - Vie: 9:00 - 18:00",
+    "email_label": "Email",
+    "email_value": "info@almendrospremium.es",
+    "response_time": "Respuesta en 24-48 horas",
+    "address_label": "Dirección",
+    "address_value": "Camino del Almendro, 123",
+    "city_value": "12345 Valencia, España",
+    "visit_hours": "Horario de Visitas",
+    "weekdays": "Lunes - Viernes:",
+    "weekdays_time": "9:00 - 14:00, 16:00 - 18:00",
+    "saturday": "Sábados:",
+    "saturday_time": "9:00 - 13:00 (previa cita)",
+    "note": "* Se recomienda concertar cita previa para visitas"
+  },
+  "footer": {
+    "copyright": "© 2024 Almendros Premium. Todos los derechos reservados."
+  },
+  "almond_varieties": {
+    "marcona": {
+      "name": "Marcona",
+      "description": "Variedad de almendra de gran calidad, conocida por su sabor dulce y textura suave. Ideal para consumo directo y repostería fina.",
+      "characteristics": "Forma redondeada, tamaño grande, cáscara dura, alto contenido en aceite",
+      "origin": "España"
+    },
+    "guara": {
+      "name": "Guara",
+      "description": "Almendra de alta productividad y excelente adaptación. Muy valorada en la industria por su regularidad y calidad constante.",
+      "characteristics": "Cáscara semi-dura, grano alargado, floración tardía, resistente a heladas",
+      "origin": "Aragón, España"
+    },
+    "largueta": {
+      "name": "Largueta",
+      "description": "Variedad tradicional española muy apreciada por su forma alargada y sabor intenso. Perfecta para turrones y peladillas.",
+      "characteristics": "Forma muy alargada, cáscara blanda, sabor característico, floración temprana",
+      "origin": "Levante, España"
+    },
+    "avijor": {
+      "name": "Avijor",
+      "description": "Variedad moderna autofértil de alta producción. Excelente comportamiento agronómico y gran adaptabilidad.",
+      "characteristics": "Autofértil, alta productividad, grano grande, floración media-tardía",
+      "origin": "España"
+    },
+    "vairo": {
+      "name": "Vairo",
+      "description": "Almendra de cáscara blanda con excelente calibre. Muy productiva y de floración tardía, ideal para zonas con riesgo de heladas.",
+      "characteristics": "Cáscara muy blanda, grano grande y plano, floración muy tardía",
+      "origin": "España"
+    },
+    "soleta": {
+      "name": "Soleta",
+      "description": "Variedad autofértil de floración tardía. Excelente productividad y adaptación a diferentes condiciones climáticas.",
+      "characteristics": "Autofértil, floración tardía, cáscara dura, alto rendimiento",
+      "origin": "CITA Aragón"
+    }
+  },
+  "harvest_periods": {
+    "marcona": "Septiembre - Octubre",
+    "guara": "Septiembre",
+    "largueta": "Agosto - Septiembre",
+    "avijor": "Septiembre",
+    "vairo": "Septiembre - Octubre",
+    "soleta": "Septiembre"
+  }
+}

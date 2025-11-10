@@ -1,5 +1,6 @@
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -9,6 +10,7 @@ export default function ContactPage() {
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const { t } = useTranslation();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -32,9 +34,11 @@ export default function ContactPage() {
     <div className="min-h-screen bg-gray-50">
       <div className="bg-green-800 text-white py-12 px-4">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Contacto</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            {t('contact.title')}
+          </h1>
           <p className="text-xl text-green-100">
-            Estamos aquí para ayudarte con tu proyecto
+            {t('contact.subtitle')}
           </p>
         </div>
       </div>
@@ -43,13 +47,10 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
             <h2 className="text-3xl font-bold text-gray-800 mb-6">
-              Ponte en Contacto
+              {t('contact.contact_info')}
             </h2>
             <p className="text-gray-600 mb-8 leading-relaxed">
-              ¿Necesitas asesoramiento sobre qué variedad de almendro es la más
-              adecuada para tu explotación? Nuestro equipo de expertos está
-              disponible para resolver todas tus dudas y ayudarte a tomar la
-              mejor decisión.
+              {t('contact.description')}
             </p>
 
             <div className="space-y-6">
@@ -58,9 +59,11 @@ export default function ContactPage() {
                   <Phone className="text-green-800" size={24} />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-800 mb-1">Teléfono</h3>
-                  <p className="text-gray-600">+34 123 456 789</p>
-                  <p className="text-gray-500 text-sm">Lun - Vie: 9:00 - 18:00</p>
+                  <h3 className="font-semibold text-gray-800 mb-1">
+                    {t('contact.phone_label')}
+                  </h3>
+                  <p className="text-gray-600">{t('contact.phone_value')}</p>
+                  <p className="text-gray-500 text-sm">{t('contact.hours')}</p>
                 </div>
               </div>
 
@@ -69,10 +72,12 @@ export default function ContactPage() {
                   <Mail className="text-green-800" size={24} />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-800 mb-1">Email</h3>
-                  <p className="text-gray-600">info@almendrospremium.es</p>
+                  <h3 className="font-semibold text-gray-800 mb-1">
+                    {t('contact.email_label')}
+                  </h3>
+                  <p className="text-gray-600">{t('contact.email_value')}</p>
                   <p className="text-gray-500 text-sm">
-                    Respuesta en 24-48 horas
+                    {t('contact.response_time')}
                   </p>
                 </div>
               </div>
@@ -82,11 +87,13 @@ export default function ContactPage() {
                   <MapPin className="text-green-800" size={24} />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-800 mb-1">Dirección</h3>
+                  <h3 className="font-semibold text-gray-800 mb-1">
+                    {t('contact.address_label')}
+                  </h3>
                   <p className="text-gray-600">
-                    Camino del Almendro, 123
+                    {t('contact.address_value')}
                     <br />
-                    12345 Valencia, España
+                    {t('contact.city_value')}
                   </p>
                 </div>
               </div>
@@ -94,29 +101,29 @@ export default function ContactPage() {
 
             <div className="mt-8 bg-green-50 p-6 rounded-lg">
               <h3 className="font-semibold text-gray-800 mb-3">
-                Horario de Visitas
+                {t('contact.visit_hours')}
               </h3>
               <p className="text-gray-600 mb-2">
-                <strong>Lunes - Viernes:</strong> 9:00 - 14:00, 16:00 - 18:00
+                <strong>{t('contact.weekdays')}</strong> {t('contact.weekdays_time')}
               </p>
               <p className="text-gray-600">
-                <strong>Sábados:</strong> 9:00 - 13:00 (previa cita)
+                <strong>{t('contact.saturday')}</strong> {t('contact.saturday_time')}
               </p>
               <p className="text-gray-500 text-sm mt-3">
-                * Se recomienda concertar cita previa para visitas
+                {t('contact.note')}
               </p>
             </div>
           </div>
 
           <div className="bg-white p-8 rounded-lg shadow-md">
             <h2 className="text-2xl font-bold text-gray-800 mb-6">
-              Envíanos un Mensaje
+              {t('contact.form_title')}
             </h2>
             {submitted ? (
               <div className="bg-green-50 border border-green-200 text-green-800 p-4 rounded-lg mb-6">
-                <p className="font-semibold">¡Mensaje enviado con éxito!</p>
+                <p className="font-semibold">{t('contact.form_success')}</p>
                 <p className="text-sm">
-                  Nos pondremos en contacto contigo lo antes posible.
+                  {t('contact.form_success_msg')}
                 </p>
               </div>
             ) : null}
@@ -126,7 +133,7 @@ export default function ContactPage() {
                   htmlFor="name"
                   className="block text-gray-700 font-medium mb-2"
                 >
-                  Nombre Completo *
+                  {t('contact.fields.name')}
                 </label>
                 <input
                   type="text"
@@ -136,7 +143,7 @@ export default function ContactPage() {
                   value={formData.name}
                   onChange={handleChange}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-800 focus:border-transparent outline-none transition-all"
-                  placeholder="Tu nombre"
+                  placeholder={t('contact.placeholders.name')}
                 />
               </div>
 
@@ -145,7 +152,7 @@ export default function ContactPage() {
                   htmlFor="email"
                   className="block text-gray-700 font-medium mb-2"
                 >
-                  Email *
+                  {t('contact.fields.email')}
                 </label>
                 <input
                   type="email"
@@ -155,7 +162,7 @@ export default function ContactPage() {
                   value={formData.email}
                   onChange={handleChange}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-800 focus:border-transparent outline-none transition-all"
-                  placeholder="tu@email.com"
+                  placeholder={t('contact.placeholders.email')}
                 />
               </div>
 
@@ -164,7 +171,7 @@ export default function ContactPage() {
                   htmlFor="phone"
                   className="block text-gray-700 font-medium mb-2"
                 >
-                  Teléfono
+                  {t('contact.fields.phone')}
                 </label>
                 <input
                   type="tel"
@@ -173,7 +180,7 @@ export default function ContactPage() {
                   value={formData.phone}
                   onChange={handleChange}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-800 focus:border-transparent outline-none transition-all"
-                  placeholder="+34 123 456 789"
+                  placeholder={t('contact.placeholders.phone')}
                 />
               </div>
 
@@ -182,7 +189,7 @@ export default function ContactPage() {
                   htmlFor="message"
                   className="block text-gray-700 font-medium mb-2"
                 >
-                  Mensaje *
+                  {t('contact.fields.message')}
                 </label>
                 <textarea
                   id="message"
@@ -192,7 +199,7 @@ export default function ContactPage() {
                   onChange={handleChange}
                   rows={5}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-800 focus:border-transparent outline-none transition-all resize-none"
-                  placeholder="Cuéntanos en qué podemos ayudarte..."
+                  placeholder={t('contact.placeholders.message')}
                 />
               </div>
 
@@ -201,7 +208,7 @@ export default function ContactPage() {
                 className="w-full bg-green-800 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors flex items-center justify-center"
               >
                 <Send className="mr-2" size={20} />
-                Enviar Mensaje
+                {t('contact.send')}
               </button>
             </form>
           </div>

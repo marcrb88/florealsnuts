@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react';
 import { supabase, AlmondVariety } from '../lib/supabase';
 import { Loader2, Calendar, MapPin, TrendingUp } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function CatalogPage() {
   const [varieties, setVarieties] = useState<AlmondVariety[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedVariety, setSelectedVariety] = useState<AlmondVariety | null>(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     fetchVarieties();
@@ -24,7 +26,7 @@ export default function CatalogPage() {
       if (error) throw error;
       setVarieties(data || []);
     } catch (err) {
-      setError('Error al cargar las variedades');
+      setError(t('catalog.error'));
       console.error(err);
     } finally {
       setLoading(false);
@@ -51,9 +53,11 @@ export default function CatalogPage() {
     <div className="min-h-screen bg-gray-50">
       <div className="bg-green-800 text-white py-12 px-4">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Catálogo de Variedades</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            {t('catalog.title')}
+          </h1>
           <p className="text-xl text-green-100">
-            Descubre nuestra selección de almendros de alta calidad
+            {t('catalog.subtitle')}
           </p>
         </div>
       </div>
@@ -93,7 +97,7 @@ export default function CatalogPage() {
                     {variety.price.toFixed(2)}€
                   </span>
                   <button className="bg-green-800 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors">
-                    Ver Detalles
+                    {t('catalog.details')}
                   </button>
                 </div>
               </div>
@@ -148,14 +152,18 @@ export default function CatalogPage() {
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <div className="flex items-center mb-2">
                     <TrendingUp className="text-green-800 mr-2" size={20} />
-                    <h3 className="font-semibold text-gray-800">Características</h3>
+                    <h3 className="font-semibold text-gray-800">
+                      {t('catalog.title')}
+                    </h3>
                   </div>
                   <p className="text-gray-600">{selectedVariety.characteristics}</p>
                 </div>
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <div className="flex items-center mb-2">
                     <MapPin className="text-green-800 mr-2" size={20} />
-                    <h3 className="font-semibold text-gray-800">Origen</h3>
+                    <h3 className="font-semibold text-gray-800">
+                      {t('contact.address_label')}
+                    </h3>
                   </div>
                   <p className="text-gray-600 mb-4">{selectedVariety.origin}</p>
                   <div className="flex items-center mb-2">
@@ -168,13 +176,13 @@ export default function CatalogPage() {
 
               <div className="flex items-center justify-between pt-6 border-t">
                 <span className="text-3xl font-bold text-green-800">
-                  {selectedVariety.price.toFixed(2)}€ / unidad
+                  {selectedVariety.price.toFixed(2)}{t('catalog.price_unit')}
                 </span>
                 <button
                   onClick={() => setSelectedVariety(null)}
                   className="bg-green-800 hover:bg-green-700 text-white px-6 py-3 rounded-lg transition-colors text-lg"
                 >
-                  Cerrar
+                  {t('catalog.close')}
                 </button>
               </div>
             </div>

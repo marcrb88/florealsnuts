@@ -1,5 +1,7 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import LanguageSelector from './LanguageSelector';
 
 type NavigationProps = {
   currentPage: 'home' | 'catalog' | 'contact';
@@ -8,11 +10,12 @@ type NavigationProps = {
 
 export default function Navigation({ currentPage, onNavigate }: NavigationProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   const menuItems = [
-    { id: 'home' as const, label: 'Inicio' },
-    { id: 'catalog' as const, label: 'Catálogo' },
-    { id: 'contact' as const, label: 'Contacto' },
+    { id: 'home' as const, label: t('navigation.home') },
+    { id: 'catalog' as const, label: t('navigation.catalog') },
+    { id: 'contact' as const, label: t('navigation.contact') },
   ];
 
   return (
@@ -24,11 +27,11 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
               onClick={() => onNavigate('home')}
               className="text-2xl font-bold text-green-800 hover:text-green-600 transition-colors"
             >
-              Almendros Premium
+              {t('navigation.title')}
             </button>
           </div>
 
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-8 items-center">
             {menuItems.map((item) => (
               <button
                 key={item.id}
@@ -42,9 +45,12 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
                 {item.label}
               </button>
             ))}
+            <div className="border-l border-gray-300 pl-6">
+              <LanguageSelector />
+            </div>
           </div>
 
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-4">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-600 hover:text-green-800"
@@ -72,6 +78,9 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
                 {item.label}
               </button>
             ))}
+            <div className="px-3 py-4 border-t border-gray-200">
+              <LanguageSelector />
+            </div>
           </div>
         )}
       </div>

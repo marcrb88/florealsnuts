@@ -1,0 +1,134 @@
+{
+  "navigation": {
+    "home": "Home",
+    "catalog": "Catalog",
+    "contact": "Contact",
+    "title": "Premium Almonds"
+  },
+  "home": {
+    "carousel": {
+      "slide1_title": "Quality Almond Cultivation",
+      "slide1_subtitle": "Selected varieties for your farm",
+      "slide2_title": "Sustainable Production",
+      "slide2_subtitle": "Commitment to future agriculture",
+      "slide3_title": "Premium Almonds",
+      "slide3_subtitle": "Expert advice and quality guarantee"
+    },
+    "section1": {
+      "title": "Almond Specialists",
+      "description": "With years of experience in almond cultivation and commercialization, we offer the best varieties on the market. Our passion is helping you find the perfect variety for your agricultural operation."
+    },
+    "features": {
+      "varieties": "Select Varieties",
+      "varieties_desc": "Wide catalog of almond varieties adapted to different climates and soils",
+      "quality": "Quality Guaranteed",
+      "quality_desc": "Origin and quality certification for all our products",
+      "sustainable": "Sustainable Cultivation",
+      "sustainable_desc": "Agricultural practices respectful of the environment",
+      "advisory": "Expert Advisory",
+      "advisory_desc": "Professional team to guide you in variety selection"
+    },
+    "button": "View Variety Catalog",
+    "section2": {
+      "title": "Our Experience",
+      "para1": "We have spent decades devoted to almond cultivation and commercialization. Our experience allows us to select and offer the most productive varieties adapted to the conditions of each region.",
+      "para2": "We work directly with certified nurseries and apply rigorous quality controls at all stages of the process, from rootstock selection to final delivery.",
+      "para3": "Our commitment is to provide plants of the highest quality, accompanied by the best technical advice to ensure the success of your plantation."
+    }
+  },
+  "catalog": {
+    "title": "Variety Catalog",
+    "subtitle": "Discover our selection of high-quality almonds",
+    "details": "View Details",
+    "close": "Close",
+    "price_unit": "€ / unit",
+    "loading": "Loading...",
+    "error": "Error loading varieties"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "We're here to help with your project",
+    "form_title": "Send us a Message",
+    "form_success": "Message sent successfully!",
+    "form_success_msg": "We will get in touch with you as soon as possible.",
+    "fields": {
+      "name": "Full Name *",
+      "email": "Email *",
+      "phone": "Phone",
+      "message": "Message *"
+    },
+    "placeholders": {
+      "name": "Your name",
+      "email": "your@email.com",
+      "phone": "+34 123 456 789",
+      "message": "Tell us how we can help you..."
+    },
+    "send": "Send Message",
+    "contact_info": "Contact",
+    "description": "Need advice on which almond variety is most suitable for your farm? Our team of experts is available to answer all your questions and help you make the best decision.",
+    "phone_label": "Phone",
+    "phone_value": "+34 123 456 789",
+    "hours": "Mon - Fri: 9:00 - 18:00",
+    "email_label": "Email",
+    "email_value": "info@premiumalmonds.com",
+    "response_time": "Response in 24-48 hours",
+    "address_label": "Address",
+    "address_value": "Almond Road, 123",
+    "city_value": "12345 Valencia, Spain",
+    "visit_hours": "Visit Hours",
+    "weekdays": "Monday - Friday:",
+    "weekdays_time": "9:00 - 14:00, 16:00 - 18:00",
+    "saturday": "Saturdays:",
+    "saturday_time": "9:00 - 13:00 (by appointment)",
+    "note": "* Prior appointment recommended for visits"
+  },
+  "footer": {
+    "copyright": "© 2024 Premium Almonds. All rights reserved."
+  },
+  "almond_varieties": {
+    "marcona": {
+      "name": "Marcona",
+      "description": "High-quality almond variety, known for its sweet flavor and soft texture. Ideal for direct consumption and fine pastry.",
+      "characteristics": "Rounded shape, large size, hard shell, high oil content",
+      "origin": "Spain"
+    },
+    "guara": {
+      "name": "Guara",
+      "description": "High productivity almond with excellent adaptation. Highly valued in industry for its consistency and constant quality.",
+      "characteristics": "Semi-hard shell, elongated kernel, late flowering, frost resistant",
+      "origin": "Aragon, Spain"
+    },
+    "largueta": {
+      "name": "Largueta",
+      "description": "Traditional Spanish variety highly appreciated for its elongated shape and intense flavor. Perfect for nougat and sugared almonds.",
+      "characteristics": "Very elongated shape, soft shell, characteristic flavor, early flowering",
+      "origin": "Levante, Spain"
+    },
+    "avijor": {
+      "name": "Avijor",
+      "description": "Modern self-fertile variety with high production. Excellent agronomic behavior and great adaptability.",
+      "characteristics": "Self-fertile, high productivity, large kernel, mid-late flowering",
+      "origin": "Spain"
+    },
+    "vairo": {
+      "name": "Vairo",
+      "description": "Soft-shell almond with excellent caliber. Very productive and late flowering, ideal for frost-prone areas.",
+      "characteristics": "Very soft shell, large and flat kernel, very late flowering",
+      "origin": "Spain"
+    },
+    "soleta": {
+      "name": "Soleta",
+      "description": "Self-fertile variety with late flowering. Excellent productivity and adaptation to different climatic conditions.",
+      "characteristics": "Self-fertile, late flowering, hard shell, high yield",
+      "origin": "CITA Aragon"
+    }
+  },
+  "harvest_periods": {
+    "marcona": "September - October",
+    "guara": "September",
+    "largueta": "August - September",
+    "avijor": "September",
+    "vairo": "September - October",
+    "soleta": "September"
+  }
+}

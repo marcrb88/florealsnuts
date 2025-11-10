@@ -1,26 +1,28 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
-
-const carouselImages = [
-  {
-    url: 'https://images.pexels.com/photos/7457418/pexels-photo-7457418.jpeg',
-    title: 'Cultivo de Almendros de Calidad',
-    subtitle: 'Variedades seleccionadas para tu explotación',
-  },
-  {
-    url: 'https://images.pexels.com/photos/4033630/pexels-photo-4033630.jpeg',
-    title: 'Canvi',
-    subtitle: 'Compromiso con la agricultura de futuro',
-  },
-  {
-    url: 'https://images.pexels.com/photos/6157055/pexels-photo-6157055.jpeg',
-    title: 'Almendros Premium',
-    subtitle: 'Asesoramiento experto y garantía de calidad',
-  },
-];
+import { useTranslation } from 'react-i18next';
 
 export default function ImageCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const { t } = useTranslation();
+
+  const carouselImages = [
+    {
+      url: 'https://images.pexels.com/photos/7457418/pexels-photo-7457418.jpeg',
+      titleKey: 'home.carousel.slide1_title',
+      subtitleKey: 'home.carousel.slide1_subtitle',
+    },
+    {
+      url: 'https://images.pexels.com/photos/4033630/pexels-photo-4033630.jpeg',
+      titleKey: 'home.carousel.slide2_title',
+      subtitleKey: 'home.carousel.slide2_subtitle',
+    },
+    {
+      url: 'https://images.pexels.com/photos/6157055/pexels-photo-6157055.jpeg',
+      titleKey: 'home.carousel.slide3_title',
+      subtitleKey: 'home.carousel.slide3_subtitle',
+    },
+  ];
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -53,13 +55,17 @@ export default function ImageCarousel() {
         >
           <img
             src={image.url}
-            alt={image.title}
+            alt={t(image.titleKey)}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
             <div className="text-center text-white px-4">
-              <h1 className="text-4xl md:text-6xl font-bold mb-4">{image.title}</h1>
-              <p className="text-xl md:text-2xl">{image.subtitle}</p>
+              <h1 className="text-4xl md:text-6xl font-bold mb-4">
+                {t(image.titleKey)}
+              </h1>
+              <p className="text-xl md:text-2xl">
+                {t(image.subtitleKey)}
+              </p>
             </div>
           </div>
         </div>
