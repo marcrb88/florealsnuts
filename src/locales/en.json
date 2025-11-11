@@ -80,7 +80,9 @@
     "weekdays_time": "9:00 - 14:00, 16:00 - 18:00",
     "saturday": "Saturdays:",
     "saturday_time": "9:00 - 13:00 (by appointment)",
-    "note": "* Prior appointment recommended for visits"
+    "note": "* Prior appointment recommended for visits",
+    "captcha_error": "reCAPTCHA verification error. Please try again.",
+    "sending": "Sending..."
   },
   "footer": {
     "copyright": "© 2024 Premium Almonds. All rights reserved."

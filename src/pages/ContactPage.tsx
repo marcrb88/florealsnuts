@@ -1,6 +1,7 @@
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { loadRecaptchaScript, getRecaptchaToken } from '../lib/recaptcha';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -10,15 +11,38 @@ export default function ContactPage() {
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [captchaError, setCaptchaError] = useState<string | null>(null);
   const { t } = useTranslation();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  useEffect(() => {
+    loadRecaptchaScript();
+  }, []);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: '', email: '', phone: '', message: '' });
-    }, 3000);
+    setCaptchaError(null);
+    setIsSubmitting(true);
+
+    try {
+      const token = await getRecaptchaToken();
+
+      if (!token) {
+        setCaptchaError(t('contact.captcha_error') || 'reCAPTCHA error');
+        return;
+      }
+
+      setSubmitted(true);
+      setTimeout(() => {
+        setSubmitted(false);
+        setFormData({ name: '', email: '', phone: '', message: '' });
+      }, 3000);
+    } catch (error) {
+      console.error('reCAPTCHA error:', error);
+      setCaptchaError(t('contact.captcha_error') || 'reCAPTCHA error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -127,6 +151,11 @@ export default function ContactPage() {
                 </p>
               </div>
             ) : null}
+            {captchaError ? (
+              <div className="bg-red-50 border border-red-200 text-red-800 p-4 rounded-lg mb-6">
+                <p className="text-sm">{captchaError}</p>
+              </div>
+            ) : null}
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label
@@ -203,12 +232,19 @@ export default function ContactPage() {
                 />
               </div>
 
+              <div className="flex items-center justify-between text-xs text-gray-500 mb-2">
+                <span>This site is protected by reCAPTCHA and the Google<br />
+                  <a href="https://policies.google.com/privacy" className="underline hover:text-gray-600">Privacy Policy</a> and
+                  <a href="https://policies.google.com/terms" className="underline hover:text-gray-600"> Terms of Service</a> apply.
+                </span>
+              </div>
               <button
                 type="submit"
-                className="w-full bg-green-800 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors flex items-center justify-center"
+                disabled={isSubmitting}
+                className="w-full bg-green-800 hover:bg-green-700 disabled:bg-gray-400 text-white font-semibold px-6 py-3 rounded-lg transition-colors flex items-center justify-center"
               >
                 <Send className="mr-2" size={20} />
-                {t('contact.send')}
+                {isSubmitting ? t('contact.sending') || 'Enviando...' : t('contact.send')}
               </button>
             </form>
           </div>

@@ -80,7 +80,9 @@
     "weekdays_time": "9:00 - 14:00, 16:00 - 18:00",
     "saturday": "Sábados:",
     "saturday_time": "9:00 - 13:00 (previa cita)",
-    "note": "* Se recomienda concertar cita previa para visitas"
+    "note": "* Se recomienda concertar cita previa para visitas",
+    "captcha_error": "Error de verificación reCAPTCHA. Por favor, intenta de nuevo.",
+    "sending": "Enviando..."
   },
   "footer": {
     "copyright": "© 2024 Almendros Premium. Todos los derechos reservados."

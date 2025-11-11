@@ -80,7 +80,9 @@
     "weekdays_time": "9:00 - 14:00, 16:00 - 18:00",
     "saturday": "Dissabtes:",
     "saturday_time": "9:00 - 13:00 (cita prèvia)",
-    "note": "* Es recomana concertar cita prèvia per a visites"
+    "note": "* Es recomana concertar cita prèvia per a visites",
+    "captcha_error": "Error de verificació reCAPTCHA. Si us plau, intenta-ho de nou.",
+    "sending": "Enviant..."
   },
   "footer": {
     "copyright": "© 2024 Ametllers Premium. Tots els drets reservats."
