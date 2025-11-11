@@ -29,7 +29,7 @@ function App() {
       <footer className="bg-gray-800 text-white py-8 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-gray-300">
-            © 2024 Ametllers Premium. Tots els drets reservats.
+            © 2024 FlorealsNuts. Tots els drets reservats.
           </p>
         </div>
       </footer>
