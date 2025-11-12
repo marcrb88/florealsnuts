@@ -1,12 +1,9 @@
-import ImageCarousel from '../components/ImageCarousel';
+import ImageCarousel from '../../components/ImageCarousel';
 import { Leaf, Award, Users, TreeDeciduous } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
-type HomePageProps = {
-  onNavigate: (page: 'catalog') => void;
-};
-
-export default function HomePage({ onNavigate }: HomePageProps) {
+export default function HomePage() {
   const { t } = useTranslation();
 
   const features = [
@@ -39,9 +36,9 @@ export default function HomePage({ onNavigate }: HomePageProps) {
       <section className="py-16 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
               {t('home.section1.title')}
-            </h2>
+            </h1>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               {t('home.section1.description')}
             </p>
@@ -68,12 +65,12 @@ export default function HomePage({ onNavigate }: HomePageProps) {
           </div>
 
           <div className="text-center">
-            <button
-              onClick={() => onNavigate('catalog')}
-              className="bg-green-800 hover:bg-green-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors text-lg"
+            <Link
+              to="/catalog"
+              className="bg-green-800 hover:bg-green-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors text-lg inline-block"
             >
               {t('home.button')}
-            </button>
+            </Link>
           </div>
         </div>
       </section>

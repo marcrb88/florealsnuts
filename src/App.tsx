@@ -1,39 +1,30 @@
-import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
-import HomePage from './pages/HomePage';
-import CatalogPage from './pages/CatalogPage';
-import ContactPage from './pages/ContactPage';
-
-type Page = 'home' | 'catalog' | 'contact';
+import HomePage from './pages/home';
+import CatalogPage from './pages/catalog';
+import VariedadPage from './pages/catalog/variedad';
+import ContactPage from './pages/contact';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState<Page>('home');
-
-  const renderPage = () => {
-    switch (currentPage) {
-      case 'home':
-        return <HomePage onNavigate={setCurrentPage} />;
-      case 'catalog':
-        return <CatalogPage />;
-      case 'contact':
-        return <ContactPage />;
-      default:
-        return <HomePage onNavigate={setCurrentPage} />;
-    }
-  };
-
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Navigation currentPage={currentPage} onNavigate={setCurrentPage} />
-      {renderPage()}
-      <footer className="bg-gray-800 text-white py-8 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="text-gray-300">
-            © 2024 FlorealsNuts. Tots els drets reservats.
-          </p>
-        </div>
-      </footer>
-    </div>
+    <Router>
+      <div className="min-h-screen bg-gray-50">
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/catalog" element={<CatalogPage />} />
+          <Route path="/variedad/:id" element={<VariedadPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+        <footer className="bg-gray-800 text-white py-8 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <p className="text-gray-300">
+              © 2024 Ametllers Premium. Tots els drets reservats.
+            </p>
+          </div>
+        </footer>
+      </div>
+    </Router>
   );
 }
 

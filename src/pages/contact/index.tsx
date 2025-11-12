@@ -1,7 +1,7 @@
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { loadRecaptchaScript, getRecaptchaToken } from '../lib/recaptcha';
+import { loadRecaptchaScript, getRecaptchaToken } from '../../lib/recaptcha';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
