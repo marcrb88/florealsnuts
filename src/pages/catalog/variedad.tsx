@@ -1,9 +1,21 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Calendar, MapPin, TrendingUp } from 'lucide-react';
-import { supabase, AlmondVariety } from '../../lib/supabase';
+import varieties from '../../data/varieties.json';
 import { Loader2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+
+type AlmondVariety = {
+  id: string;
+  name: string;
+  description: string;
+  characteristics: string;
+  image_url: string;
+  origin: string;
+  harvest_period: string;
+  price: number;
+  available: boolean;
+};
 
 export default function VariedadPage() {
   const { id } = useParams<{ id: string }>();
@@ -16,21 +28,15 @@ export default function VariedadPage() {
     fetchVariety();
   }, [id]);
 
-  const fetchVariety = async () => {
+  const fetchVariety = () => {
     try {
       setLoading(true);
-      const { data, error } = await supabase
-        .from('almond_varieties')
-        .select('*')
-        .eq('id', id)
-        .maybeSingle();
-
-      if (error) throw error;
-      if (!data) {
+      const found = varieties.find((v) => v.id === id);
+      if (!found) {
         setError('Variedad no encontrada');
         return;
       }
-      setVariety(data);
+      setVariety(found);
     } catch (err) {
       setError('Error al cargar la variedad');
       console.error(err);

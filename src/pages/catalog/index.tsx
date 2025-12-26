@@ -1,11 +1,23 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { supabase, AlmondVariety } from '../../lib/supabase';
+import varieties from '../../data/varieties.json';
 import { Loader2 } from 'lucide-react';
 
+type AlmondVariety = {
+  id: string;
+  name: string;
+  description: string;
+  characteristics: string;
+  image_url: string;
+  origin: string;
+  harvest_period: string;
+  price: number;
+  available: boolean;
+};
+
 export default function CatalogPage() {
-  const [varieties, setVarieties] = useState<AlmondVariety[]>([]);
+  const [varietiesData, setVarietiesData] = useState<AlmondVariety[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const { t } = useTranslation();
@@ -14,17 +26,13 @@ export default function CatalogPage() {
     fetchVarieties();
   }, []);
 
-  const fetchVarieties = async () => {
+  const fetchVarieties = () => {
     try {
       setLoading(true);
-      const { data, error } = await supabase
-        .from('almond_varieties')
-        .select('*')
-        .eq('available', true)
-        .order('name');
-
-      if (error) throw error;
-      setVarieties(data || []);
+      const sortedVarieties = [...varieties].sort((a, b) =>
+        a.name.localeCompare(b.name)
+      );
+      setVarietiesData(sortedVarieties);
     } catch (err) {
       setError(t('catalog.error'));
       console.error(err);
@@ -64,7 +72,7 @@ export default function CatalogPage() {
 
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {varieties.map((variety) => (
+          {varietiesData.map((variety) => (
             <Link
               key={variety.id}
               to={`/variedad/${variety.id}`}

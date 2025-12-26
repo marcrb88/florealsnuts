@@ -1,0 +1,68 @@
+[
+  {
+    "id": "marcona",
+    "name": "Marcona",
+    "description": "Variedad de almendra de gran tamaño con sabor dulce y textura cremosa. Ideal para tostado y consumo directo.",
+    "characteristics": "Fruto grande, piel fina, sabor dulce excepcional",
+    "image_url": "https://images.pexels.com/photos/4033630/pexels-photo-4033630.jpeg",
+    "origin": "Comunidad Valenciana, España",
+    "harvest_period": "Septiembre - Octubre",
+    "price": 4.50,
+    "available": true
+  },
+  {
+    "id": "guara",
+    "name": "Guara",
+    "description": "Variedad muy productiva y adaptable. Fruto de tamaño medio-grande con buen sabor y excelente capacidad de almacenamiento.",
+    "characteristics": "Muy productiva, resistente al frío, floracion tardía",
+    "image_url": "https://images.pexels.com/photos/4033630/pexels-photo-4033630.jpeg",
+    "origin": "España",
+    "harvest_period": "Septiembre",
+    "price": 3.75,
+    "available": true
+  },
+  {
+    "id": "felisiana",
+    "name": "Felisiana",
+    "description": "Variedad de buena productividad con frutos alargados y de sabor agradable. Excelente para industrialización.",
+    "characteristics": "Fruto alargado, buen rendimiento, buena compatibilidad",
+    "image_url": "https://images.pexels.com/photos/4033630/pexels-photo-4033630.jpeg",
+    "origin": "España",
+    "harvest_period": "Septiembre - Octubre",
+    "price": 3.50,
+    "available": true
+  },
+  {
+    "id": "lauranne",
+    "name": "Lauranne",
+    "description": "Variedad de origen francés, muy productiva y regular. Frutos de tamaño medio con buena capacidad de almacenamiento.",
+    "characteristics": "Productiva, floracion temprana, buena conservación",
+    "image_url": "https://images.pexels.com/photos/4033630/pexels-photo-4033630.jpeg",
+    "origin": "Francia",
+    "harvest_period": "Septiembre - Octubre",
+    "price": 3.85,
+    "available": true
+  },
+  {
+    "id": "soleta",
+    "name": "Soleta",
+    "description": "Variedad autofértil con buena capacidad productiva. Frutos de buen tamaño y sabor delicado.",
+    "characteristics": "Autofértil, buena productividad, fruto de calidad",
+    "image_url": "https://images.pexels.com/photos/4033630/pexels-photo-4033630.jpeg",
+    "origin": "España",
+    "harvest_period": "Septiembre",
+    "price": 3.95,
+    "available": true
+  },
+  {
+    "id": "desmayo-largueta",
+    "name": "Desmayo Largueta",
+    "description": "Variedad tradicional española con frutos alargados y de excelente sabor. Muy apreciada en el mercado.",
+    "characteristics": "Fruto alargado, sabor excelente, tradición",
+    "image_url": "https://images.pexels.com/photos/4033630/pexels-photo-4033630.jpeg",
+    "origin": "Comunidad Valenciana, España",
+    "harvest_period": "Octubre - Noviembre",
+    "price": 4.25,
+    "available": true
+  }
+]
